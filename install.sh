@@ -16,7 +16,7 @@ ar rcs libblas.a dgemm.o dgemv.o dtpmv.o dtpsv.o idamax.o lsame.o xerbla.o
 mv libblas.a $ALGENCAN/sources/blas/lib/.
 
 # Remove all the .o files
-rm $ALGENCAN/sources/blas/*.o
+rm $ALGENCAN/*.o
 
 # Compile the HSL files and make libhsl.a
 gfortran -c -O3 $ALGENCAN/sources/hsl/hsl_zd11d.f90
@@ -40,8 +40,8 @@ mv libhsl.a $ALGENCAN/sources/hsl/lib/.
 mv hsl_ma57_double.mod $ALGENCAN/sources/hsl/inc/.
 
 # Remove hsl_zd11_double.mod and all the .o files
-rm $ALGENCAN/sources/hsl/hsl_zd11_double.mod
-rm $ALGENCAN/sources/hsl/*.o
+rm $ALGENCAN/hsl_zd11_double.mod
+rm $ALGENCAN/*.o
 
 # Compile Algencan and make libalgencan.a
 gfortran -c -O3 -Wall -I$ALGENCAN/sources/hsl/inc $ALGENCAN/sources/algencan/lss.f90
@@ -62,7 +62,7 @@ mv bmgencan.mod $ALGENCAN/sources/algencan/inc/.
 mv bmfeasgencan.mod $ALGENCAN/sources/algencan/inc/.
 
 # remove bmnewtkkt.mod, memev.mod, lss.mod and all the .o files
-rm $ALGENCAN/sources/algencan/bmnewtkkt.mod
-rm $ALGENCAN/sources/algencan/memev.mod
-rm $ALGENCAN/sources/algencan/lss.mod
-rm $ALGENCAN/sources/algencan/*.o
+rm $ALGENCAN/bmnewtkkt.mod
+rm $ALGENCAN/memev.mod
+rm $ALGENCAN/lss.mod
+rm $ALGENCAN/*.o
