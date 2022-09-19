@@ -1,6 +1,13 @@
 # Set the environment variable ALGENCAN
 export ALGENCAN=$HOME/algencan-4.0.0
 
+# Creating necessary folders
+mkdir $ALGENCAN/sources/blas/lib
+mkdir $ALGENCAN/sources/hsl/lib
+mkdir $ALGENCAN/sources/hsl/inc
+mkdir $ALGENCAN/sources/algencan/lib
+mkdir $ALGENCAN/sources/algencan/inc
+
 # Compile the BLAS files and make libblas.a
 gfortran -c -O3 $ALGENCAN/sources/blas/dgemm.f
 gfortran -c -O3 $ALGENCAN/sources/blas/dgemv.f
